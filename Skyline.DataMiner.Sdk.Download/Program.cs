@@ -66,7 +66,7 @@ namespace Skyline.DataMiner.Sdk.Download
 				}
 				catch (Exception e)
 				{
-					logger.LogError($"Exception during Process Run: {e}");
+					logger.LogError("Exception during Process Run: {e}", e);
 					return 1;
 				}
 			}

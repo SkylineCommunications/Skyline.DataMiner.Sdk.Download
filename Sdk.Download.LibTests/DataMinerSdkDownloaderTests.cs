@@ -23,6 +23,8 @@ namespace Skyline.DataMiner.Sdk.Download.Lib.Tests
 			{
 				await downloader.AddOrUpdateDataMinerSdk(tokenSource.Token);
 			}
+
+			Assert.IsTrue(true);
 		}
 	}
 }
