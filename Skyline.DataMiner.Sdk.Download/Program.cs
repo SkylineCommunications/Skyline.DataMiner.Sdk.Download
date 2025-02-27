@@ -59,8 +59,10 @@ namespace Skyline.DataMiner.Sdk.Download
 				try
 				{
 					DataMinerSdkDownloader sdkDownload = new DataMinerSdkDownloader(logger);
-					CancellationTokenSource tokenSource = new CancellationTokenSource();
-					await sdkDownload.AddOrUpdateDataMinerSdk(tokenSource.Token);
+					using (CancellationTokenSource tokenSource = new CancellationTokenSource())
+					{
+						await sdkDownload.AddOrUpdateDataMinerSdk(tokenSource.Token);
+					}
 				}
 				catch (Exception e)
 				{

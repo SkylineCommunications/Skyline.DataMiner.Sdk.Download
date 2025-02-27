@@ -19,9 +19,10 @@ namespace Skyline.DataMiner.Sdk.Download.Lib.Tests
 
 			DataMinerSdkDownloader downloader = new DataMinerSdkDownloader(logger);
 
-			CancellationTokenSource tokenSource = new CancellationTokenSource();
-
-			await downloader.AddOrUpdateDataMinerSdk(tokenSource.Token);
+			using (CancellationTokenSource tokenSource = new CancellationTokenSource())
+			{
+				await downloader.AddOrUpdateDataMinerSdk(tokenSource.Token);
+			}
 		}
 	}
 }
