@@ -1,0 +1,38 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+    <AssemblyName>Skyline.DataMiner.Sdk.Download.Lib</AssemblyName>
+    <RootNamespace>Skyline.DataMiner.Sdk.Download.Lib</RootNamespace>
+    <PackageVersion>1.0.1</PackageVersion>
+    <Version>1.0.1</Version>
+    <PackageTags>Skyline;DataMiner</PackageTags>
+    <PackageProjectUrl>https://skyline.be</PackageProjectUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+    <PackageIcon>Icon.png</PackageIcon>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Authors>SkylineCommunications</Authors>
+    <Company>Skyline Communications</Company>
+    <Description>Library to programmatically download the DataMiner Sdk to local cache</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="README.md" Pack="true" PackagePath="" />
+    <None Include="LICENSE.txt" Pack="true" PackagePath="" />
+    <None Include="nuget\Icon.png" Pack="true" PackagePath="" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="9.0.2" />
+    <PackageReference Include="NuGet.PackageManagement" Version="6.13.1" />
+    <PackageReference Include="Skyline.DataMiner.CICD.FileSystem" Version="1.1.0" />
+    <PackageReference Include="Skyline.DataMiner.Utils.SecureCoding.Analyzers" Version="1.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+</Project>
